@@ -6,10 +6,6 @@
 |*
 \*===----------------------------------------------------------------------===*/
 
-#if defined(__linux__) || defined(__FreeBSD__) || defined(__Fuchsia__) || \
-    (defined(__sun__) && defined(__svr4__)) || defined(__NetBSD__) || \
-    defined(_AIX)
-
 #include "InstrProfiling.h"
 #include "InstrProfilingInternal.h"
 
@@ -225,6 +221,4 @@ COMPILER_RT_VISIBILITY int __llvm_write_binary_ids(ProfDataWriter *Writer) {
   (void)Writer;
   return 0;
 }
-#endif
-
 #endif
