@@ -9,6 +9,7 @@ fn main() {
     cfg.flag("-fno-stack-protector");
     cfg.flag("-fno-profile-instr-generate");
     cfg.flag("-fno-coverage-mapping");
+    cfg.flag("-fPIC");
     cfg.define("COMPILER_RT_HAS_ATOMICS", "1");
 
     let sources = vec![
@@ -17,8 +18,6 @@ fn main() {
         "c/InstrProfilingInternal.c",
         "c/InstrProfilingMerge.c",
         "c/InstrProfilingPlatformLinux.c",
-        "c/InstrProfilingPlatformOther.c",
-        "c/InstrProfilingPlatformWindows.c",
         "c/InstrProfilingWriter.c",
         "c/InstrProfilingValue.c",
         "c/InstrProfilingVersionVar.c",
